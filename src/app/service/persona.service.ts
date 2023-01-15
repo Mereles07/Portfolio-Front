@@ -7,7 +7,7 @@ import { Persona } from '../model/persona.model';
   providedIn: 'root'
 })
 export class PersonaService {
-  URL: string = 'http://localhost:8080/personas/';
+  URL: string = 'https://backendportfolio-3ena.onrender.com/personas/';
 
   constructor(private HttpClient: HttpClient) { }
 
@@ -19,9 +19,9 @@ export class PersonaService {
     return this.HttpClient.get<Persona>(this.URL + `detail/${id}`);
   }
 
-  /*public save(educacion: Educacion): Observable<any>{
-    return this.HttpClient.post<any>(this.URL + 'create', educacion);
-  }*/
+  public save(persona: Persona): Observable<any>{
+    return this.HttpClient.post<any>(this.URL + 'create', persona);
+  }
 
   public update(id: number, persona: Persona): Observable<any>{
     return this.HttpClient.put<any>(this.URL + `update/${id}`, persona);
