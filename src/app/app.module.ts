@@ -24,6 +24,9 @@ import { NewHabilidadesComponent } from './components/habilidades/new-habilidade
 import { EditHabilidadesComponent } from './components/habilidades/edit-habilidades/edit-habilidades.component';
 import { EditAcercadeComponent } from './components/acerca-de/edit-acercade/edit-acercade.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -49,7 +52,9 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    NgCircleProgressModule.forRoot({})
+    NgCircleProgressModule.forRoot({}),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
   ],
   providers: [
     PersonaService,

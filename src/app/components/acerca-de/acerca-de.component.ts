@@ -24,8 +24,8 @@ constructor(public personaService: PersonaService, private tokenService: TokenSe
     }
   }
 
-  cargarPersona(){
-    this.personaService.detail(1).subscribe(
+  cargarPersona(id?: number){
+    this.personaService.detail(id).subscribe(
       {
         next: data =>{
           this.persona = data;
