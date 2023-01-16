@@ -9,5 +9,5 @@ export const environment = {
     messagingSenderId: '584223851908',
   },
   production: true,
-  URL: 'https://backendportfolio-pg4n.onrender.com'
+  URL: 'https://backendportfolio-pg4n.onrender.com/'
 };
