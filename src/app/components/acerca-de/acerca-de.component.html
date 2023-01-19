@@ -1,10 +1,4 @@
 <div class="row text-white">
-  <div class="col-md-2">
-    <button type="button" class="btn btn-secondary" routerLink="/editacercade/{{persona.id}}" *ngIf="isLogged">
-      Editar perfil
-    </button>
-  </div>
-
   <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
     <img src={{persona.img}} class="img-fluid" id="fotoperfil">
   </div>
@@ -17,5 +11,10 @@
       <h1>Acerca de mi</h1>
       <p>{{persona.descripcion}}</p>
     </span>
+  </div>
+  <div class="col-md-2">
+    <button type="button" class="btn btn-secondary" routerLink="/editacercade/1" *ngIf="isLogged">
+      Editar perfil
+    </button>
   </div>
 </div>

@@ -27,7 +27,10 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
-
+import { EducacionService } from './service/educacion.service';
+import { ExperienciaService } from './service/experiencia.service';
+import { SkillService } from './service/skill.service';
+import { ImageService } from './service/image.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,6 +64,10 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     TokenService,
     AuthService,
     FormsModule,
+    EducacionService,
+    ExperienciaService,
+    SkillService,
+    ImageService,
     ReactiveFormsModule,
   ],
   bootstrap: [AppComponent]
